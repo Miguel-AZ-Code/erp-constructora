@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('users_id')->nullable()->foreign('users_id')->references('id')->on('users')->onDelete('set null');
             $table->unsignedBigInteger('cargo_id')->nullable()->foreign('cargo_id')->references('id')->on('cargos')->onDelete('set null');
-            $table->timestamp('fecha_ini')->nullable();
-            $table->timestamp('fecha_fin')->nullable();
+            $table->date('fecha_ini')->nullable();
+            $table->date('fecha_fin')->nullable();
             $table->timestamps();
         });
     }
