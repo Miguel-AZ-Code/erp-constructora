@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Orchid\Platform\Models\User as Authenticatable;
 
 class User extends Authenticatable
@@ -11,11 +12,24 @@ class User extends Authenticatable
      *
      * @var array
      */
+    use HasFactory;
+
     protected $fillable = [
         'name',
         'email',
         'password',
         'permissions',
+        'tipo_C',
+        'NIT',
+        'ci',
+        'telefono',
+        'direccion',
+        'fecha_n',
+        'sexo',
+        'salario',
+        'T_E',
+        'T_C'
+
     ];
 
     /**
